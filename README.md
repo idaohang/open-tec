@@ -60,5 +60,5 @@ Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board to see
 
 
 ### Misc 
-Global TEC Map Provided by Trimble (updated every 5 minutes)
+Global TEC Map (updated every 5 minutes)
 <img src='http://www.gdgps.net/products/images/tec-map-br.jpg' width='640'>
