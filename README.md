@@ -4,7 +4,7 @@ Open Source Project (software and hardware) to get GPS data and calculate TEC ( 
 
 ### Inspired by Prof. Kosuke Heki of Hokkaido University
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=yAVxsvE5ceM" target="_blank"><img src="http://img.youtube.com/vi/yAVxsvE5ceM/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=yAVxsvE5ceM" target="_blank"><img src="https://dl.dropboxusercontent.com/u/79120458/kosuke-heki.jpg" 
 alt="Earthquake Predictor using GPS" width="640" height="360" border="10" /></a>
 
 Professor Kosuke Heki of Hokkaido University in Japan believes he has found a way to predict earthquakes.
