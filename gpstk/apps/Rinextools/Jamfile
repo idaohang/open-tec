@@ -1,0 +1,12 @@
+#
+# $Id: Jamfile 3140 2012-06-18 15:03:02Z susancummins $
+#
+
+SubDir TOP apps Rinextools ;
+
+GPSLinkLibraries RinDump RinEdit RinSum RinNav : gpstk ;
+
+GPSMain RinDump : RinDump.cpp ;
+GPSMain RinEdit : RinEdit.cpp ;
+GPSMain RinNav : RinNav.cpp ;
+GPSMain RinSum : RinSum.cpp ;

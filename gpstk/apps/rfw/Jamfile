@@ -1,0 +1,9 @@
+# $Id: Jamfile 723 2007-09-04 15:43:24Z ocibu $
+
+SubDir TOP apps rfw ;
+
+GPSLinkLibraries rfw : gpstk rxio ;
+
+BonkForte ; # bleah.
+
+GPSMain rfw : rfw.cpp FDStreamBuff.cpp TCPStreamBuff.cpp ;

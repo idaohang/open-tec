@@ -1,0 +1,7 @@
+# $Id: Jamfile 762 2007-09-18 21:39:51Z btolman $
+
+SubDir TOP apps geomatics cycleslips ;
+
+GPSLinkLibraries DiscFix : geomatics gpstk ;
+
+GPSMain DiscFix : DiscFix.cpp ;

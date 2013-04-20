@@ -1,0 +1,7 @@
+# $Id: Jamfile 763 2007-09-19 12:36:44Z btolman $
+
+SubDir TOP apps geomatics kalman ;
+
+GPSLinkLibraries mergeSRI : gpstk geomatics ;
+
+GPSMain mergeSRI : mergeSRI.cpp ;

@@ -1,0 +1,10 @@
+#
+# $Id: Jamfile 1187 2008-04-04 14:25:24Z btolman $
+#
+
+SubDir TOP apps ionosphere ;
+
+GPSLinkLibraries IonoBias TECMaps : gpstk geomatics ;
+
+GPSMain IonoBias : IonoBias.cpp ;
+GPSMain TECMaps : TECMaps.cpp VTECMap.cpp ;

@@ -1,0 +1,10 @@
+#
+# $Id: Jamfile 1185 2008-04-04 14:20:47Z btolman $
+#
+
+SubDir TOP apps geomatics robust ;
+
+GPSLinkLibraries lsfilt rstats : geomatics gpstk ;
+
+GPSMain lsfilt : lsfilt.cpp ;
+GPSMain rstats : rstats.cpp ;

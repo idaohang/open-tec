@@ -1,0 +1,3 @@
+$Id: a.txt 249 2006-10-19 17:37:12Z ehagen $
+
+This is a test

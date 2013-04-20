@@ -1,0 +1,12 @@
+# $Id: Jamfile 71 2006-08-01 18:46:39Z ehagen $
+
+SubDir TOP apps checktools ;
+
+GPSLinkLibraries rowcheck rmwcheck rnwcheck ficcheck ficacheck : gpstk ;
+BonkForte ; # bleah.
+
+GPSMain rowcheck : rowcheck.cpp ;
+GPSMain rmwcheck : rmwcheck.cpp ;
+GPSMain rnwcheck : rnwcheck.cpp ;
+GPSMain ficcheck : ficcheck.cpp ;
+GPSMain ficacheck : ficacheck.cpp ;
