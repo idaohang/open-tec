@@ -36,6 +36,7 @@ sudo make install
 
 ##### gpstk
 
+System Requirements: (<a href='http://www.gpstk.org/bin/view/Documentation/SystemRequirements' target='_blank'>link</a>)
 
 ```
 tar xvzf gpstk.tar.gz
