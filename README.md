@@ -50,8 +50,7 @@ sudo make install
 ##### GPS logger
 
 ```
-Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board 
-to see the result 
+Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board to see the result 
 ```
 
 
