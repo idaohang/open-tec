@@ -22,7 +22,9 @@ the 1994 Hokkaido-Toho-Oki (Mw 8.3) earthquakes, but not before earthquakes with
 
 <a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/Heki_GRL2011.pdf" target="_blank">Heki, K., Ionospheric electron enhancement preceding the 2011 Tohoku-Oki earthquake, Geophys. Res. Lett. 38, L17312, doi:10.1029/2011GL047908, 2011.</a>
 
-<a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/2011AGU_Poster.pdf" target="_blank">[POSTER] Precursory TEC enhancement immediately before the 2011 Tohoku-Oki earthquake.</a> 
+### Poster
+
+<a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/2011AGU_Poster.pdf" target="_blank">Precursory TEC enhancement immediately before the 2011 Tohoku-Oki earthquake.</a> 
 
 ### Open TEC implementation:
 
