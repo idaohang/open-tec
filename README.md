@@ -17,7 +17,7 @@ Going back through GPS records he has found similar correlations for other major
 
 <a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/Heki_GRL2011.pdf" target="_blank">Heki, K., Ionospheric electron enhancement preceding the 2011 Tohoku-Oki earthquake, Geophys. Res. Lett. 38, L17312, doi:10.1029/2011GL047908, 2011</a>
 
-### This is how it works:
+### Open TEC implementation:
 
 ```
 1. Get Raw GPS Data from Arduino + Itead Arduino GPS Shield in SiRF binary 
@@ -25,5 +25,35 @@ Going back through GPS records he has found similar correlations for other major
 3. Calculate TEC using 'gpstk'
 ```
 
-##### Misc: Global TEC Map Provided by Trimble (updated every 5 minutes)
+### Installation
+
+##### sirfdump
+
+```
+make
+sudo make install
+```
+
+##### gpstk
+
+
+```
+tar xvzf gpstk.tar.gz
+cd gpstk/dev
+./autogen.sh
+./configure
+make
+sudo make install
+```
+
+##### GPS logger
+
+```
+Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board 
+to see the result 
+```
+
+
+### Misc 
+Global TEC Map Provided by Trimble (updated every 5 minutes)
 <img src='http://www.trimbleionoinfo.com/Images.svc/TEC' width='640'>
