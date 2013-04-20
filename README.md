@@ -5,4 +5,6 @@ Open Source Project (software and hardware) to get GPS data and calculate TEC ( 
 
 ### This is how it works:
 
-`Get Raw GPS Data from Arduino + Itead Arduino GPS Shield in Sirf III binary --> Convert Sirf III binary to RINEX using 'sirfdump' --> Calculate TEC using 'gpstk'`
+##### 1. Get Raw GPS Data from Arduino + Itead Arduino GPS Shield in Sirf III binary 
+##### 2. Convert Sirf III binary to RINEX using 'sirfdump' 
+##### 3. Calculate TEC using 'gpstk'
