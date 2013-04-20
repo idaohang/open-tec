@@ -1,0 +1,12 @@
+sirfdump - Sirf binary logger
+
+Usage:
+    sirfdump [-h] [options]
+
+Options:
+    -f, --infile                Input file, default: - (stdin)
+    -F, --outfile               Output file, default: - (stdout)
+    -o, --outtype               Output type: dump / nmea / rinex / rinex-nav. default: nmea
+    -h, --help                  Help
+    -v, --version               Show version
+

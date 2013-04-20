@@ -1,0 +1,92 @@
+#
+# Visual Studio 2010 Makefile
+# nmake /f Makefile.msvc
+
+CC=cl
+LD=link.exe
+
+AR=lib.exe
+ARFLAGS=/nologo
+
+CFLAGS=/W3 /nologo /TC /MD
+
+#/D_CRT_SECURE_NO_WARNINGS
+
+CFLAGS=$(CFLAGS) /DWIN32 /D_MBCS /D_CRT_SECURE_NO_WARNINGS \
+	/D_ENDIAN_LITTLE /DULTRAGETOPT_REPLACE_GETOPT \
+	/Dsnprintf=_snprintf \
+	/Iinclude /Iutil\codec -Iutil\proto /Ipal /Icompat/ultragetopt
+
+!if "$(DEBUG)" == "1"
+CFLAGS=$(CFLAGS) /D_DEBUG /Od /Z7
+LDFLAGS=$(LDFLAGS) /DEBUG
+!else
+CFLAGS=$(CFLAGS) /DNDEBUG /O2
+LDFLAGS=$(LDFLAGS)
+!endif
+
+OBJS=	sirf_codec_ssb.obj \
+	sirf_codec_ascii.obj \
+	sirf_codec_nmea.obj \
+	output_dump.obj \
+	output_nmea.obj \
+	output_rinex.obj \
+	output_rinex_nav.obj \
+	output_rtcm.obj \
+	nav.obj \
+	isgps.obj \
+	subframe.obj \
+	strlcat.obj \
+	sirfdump.obj \
+	crc24q.obj \
+	ultragetopt.obj
+
+all: sirfdump.exe
+
+sirfdump.exe: $(OBJS)
+	$(LD) $(LDFLAGS) /OUT:sirfdump.exe $(OBJS)
+
+clean:
+	del /Q /F *.obj vc100.pdb sirfdump.exe
+
+sirf_codec_ssb.obj: util/codec/sirf_codec_ssb.c
+	$(CC) $(CFLAGS) -c util/codec/sirf_codec_ssb.c
+sirf_codec_ascii.obj: util/codec/sirf_codec_ascii.c
+	$(CC) $(CFLAGS) -c util/codec/sirf_codec_ascii.c
+
+sirf_codec_nmea.obj: util/codec/sirf_codec_nmea.c
+	$(CC) $(CFLAGS) -DSIRF_CODEC_NMEA -c util/codec/sirf_codec_nmea.c
+
+nav.obj:  nav.c nav.h
+	$(CC) $(CFLAGS) -c nav.c
+
+output_dump.obj: output_dump.c sirfdump.h
+	$(CC) $(CFLAGS) -c output_dump.c
+
+output_nmea.obj: output_dump.c sirfdump.h
+	$(CC) $(CFLAGS) -c output_nmea.c
+
+output_rinex.obj: output_rinex.c sirfdump.h
+	$(CC) $(CFLAGS) -c output_rinex.c
+
+output_rinex_nav.obj: output_rinex_nav.c sirfdump.h
+	$(CC) $(CFLAGS) -c output_rinex_nav.c
+
+output_rtcm.obj: output_rtcm.c sirfdump.h gpsd/crc24q.h
+	$(CC) $(CFLAGS) -c output_rtcm.c
+
+subframe.obj: gpsd/gps.h gpsd/subframe.c
+	$(CC) $(CFLAGS) -c gpsd/subframe.c
+
+isgps.obj: gpsd/gps.h gpsd/isgps.c
+	$(CC) $(CFLAGS) -c gpsd/isgps.c
+
+crc24q.obj: gpsd/crc24q.h gpsd/crc24q.c
+	$(CC) $(CFLAGS) -c gpsd/crc24q.c
+
+ultragetopt.obj: compat/ultragetopt/ultragetopt.h compat/ultragetopt/ultragetopt.c
+	$(CC) $(CFLAGS) /DHAVE__STRICMP /DHAVE__STRNICMP -c compat/ultragetopt/ultragetopt.c
+
+strlcat.obj: compat/strlcat.c
+	$(CC) $(CFLAGS) -c compat/strlcat.c
+
