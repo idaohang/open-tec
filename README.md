@@ -57,8 +57,3 @@ sudo make install
 ```
 Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board to see the result 
 ```
-
-
-### Misc 
-Global TEC Map (updated every 5 minutes)
-<img src='http://www.gdgps.net/products/images/tec-map-br.jpg' width='640'>
