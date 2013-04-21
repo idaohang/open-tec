@@ -59,5 +59,6 @@ sudo make install
 ##### GPS logger
 
 ```
-Copy and Paste gps_logger.pde into Arduino IDE and upload it to the board to see the result 
+Use gps_logger.pde with Arduino IDE and upload it to the board to get SiRF Binary output 
+stored in MiniSD card. 
 ```
