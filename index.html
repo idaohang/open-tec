@@ -1,37 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Open TEC : Open Source Project (software and hardware) to get GPS data and calculate TEC ( Total Electron Content ) to be used in predicting the earthquake." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Open TEC by panggi</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Open TEC</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Open TEC</h1>
+        <p>Open Source Project (software and hardware) to get GPS data and calculate TEC ( Total Electron Content ) to be used in predicting the earthquake.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/panggi/open-tec">View on GitHub</a>
+        <p class="view"><a href="https://github.com/panggi/open-tec">View the Project on GitHub <small>panggi/open-tec</small></a></p>
 
-          <h1 id="project_title">Open TEC</h1>
-          <h2 id="project_tagline">Open Source Project (software and hardware) to get GPS data and calculate TEC ( Total Electron Content ) to be used in predicting the earthquake.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/panggi/open-tec/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/panggi/open-tec/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Inspired by Prof. Kosuke Heki of Hokkaido University</h3>
+        <ul>
+          <li><a href="https://github.com/panggi/open-tec/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/panggi/open-tec/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/panggi/open-tec">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="inspired-by-prof-kosuke-heki-of-hokkaido-university" class="anchor" href="#inspired-by-prof-kosuke-heki-of-hokkaido-university"><span class="octicon octicon-link"></span></a>Inspired by Prof. Kosuke Heki of Hokkaido University</h3>
 
 <p><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=yAVxsvE5ceM" target="_blank"><img src="https://dl.dropboxusercontent.com/u/79120458/kosuke-heki.jpg" alt="Earthquake Predictor using GPS" width="640" height="360" border="10"></a></p>
 
@@ -41,35 +39,42 @@
 
 <p>Going back through GPS records he has found similar correlations for other major earthquakes, a discovery that is being heralded as a major breakthrough in our understanding of earthquake phenomena.</p>
 
-<h5>His Abtract:</h5>
+<h5>
+<a name="his-abtract" class="anchor" href="#his-abtract"><span class="octicon octicon-link"></span></a>His Abtract:</h5>
 
 <p>The Japanese dense network of Global Positioning System (GPS) detected preseismic enhancement of ionospheric total electron content (TEC) over the region within 200-300 km from the focal region. It started ~60-40 minutes before the 2011 March 11 NE Japan earthquake (Mw 9.0) , and reached ~8 % of the background TEC. It lasted until atmospheric waves arrived at the ionosphere. Similar preseismic TEC anomalies, with amplitudes dependent on magnitudes, were seen in the 2010 Chile (Mw 8.8), the 2004 Sumatra-Andaman (Mw 9.2), the 2007 Bengkulu (Mw 8.6), and 
 the 1994 Hokkaido-Toho-Oki (Mw 8.3) earthquakes, but not before earthquakes with Mw 8 or less.</p>
 
-<h3>Paper</h3>
+<h3>
+<a name="paper" class="anchor" href="#paper"><span class="octicon octicon-link"></span></a>Paper</h3>
 
 <p><a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/Heki_GRL2011.pdf" target="_blank">Heki, K., Ionospheric electron enhancement preceding the 2011 Tohoku-Oki earthquake, Geophys. Res. Lett. 38, L17312, doi:10.1029/2011GL047908, 2011</a></p>
 
-<h3>Poster</h3>
+<h3>
+<a name="poster" class="anchor" href="#poster"><span class="octicon octicon-link"></span></a>Poster</h3>
 
 <p><a href="http://www.ep.sci.hokudai.ac.jp/~heki/pdf/2011AGU_Poster.pdf" target="_blank">Precursory TEC enhancement immediately before the 2011 Tohoku-Oki earthquake.</a> </p>
 
-<h3>Open TEC implementation:</h3>
+<h3>
+<a name="open-tec-implementation" class="anchor" href="#open-tec-implementation"><span class="octicon octicon-link"></span></a>Open TEC implementation:</h3>
 
 <pre><code>1. Get Raw GPS Data from Arduino + Itead Arduino GPS Shield in SiRF binary 
 2. Convert SiRF binary to RINEX using 'sirfdump' 
 3. Calculate TEC using 'gpstk'
 </code></pre>
 
-<h3>Installation</h3>
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<h5>sirfdump</h5>
+<h5>
+<a name="sirfdump" class="anchor" href="#sirfdump"><span class="octicon octicon-link"></span></a>sirfdump</h5>
 
 <pre><code>make
 sudo make install
 </code></pre>
 
-<h5>gpstk</h5>
+<h5>
+<a name="gpstk" class="anchor" href="#gpstk"><span class="octicon octicon-link"></span></a>gpstk</h5>
 
 <p>System Requirements: (<a href="http://www.gpstk.org/bin/view/Documentation/SystemRequirements" target="_blank">link</a>)</p>
 
@@ -81,13 +86,15 @@ make
 sudo make install
 </code></pre>
 
-<h5>GPS logger</h5>
+<h5>
+<a name="gps-logger" class="anchor" href="#gps-logger"><span class="octicon octicon-link"></span></a>GPS logger</h5>
 
 <pre><code>Use gps_logger.pde with Arduino IDE and upload it to the board in order to store 
 SiRF Binary output into MiniSD card. 
 </code></pre>
 
-<h3>Misc</h3>
+<h3>
+<a name="misc" class="anchor" href="#misc"><span class="octicon octicon-link"></span></a>Misc</h3>
 
 <p>Global TEC Map 5 minutes interval
 <img src="http://www.gdgps.net/products/images/tec-map-br.jpg" width="640"></p>
@@ -98,17 +105,12 @@ SiRF Binary output into MiniSD card.
 <p>Australia TEC Map 5 minutes interval
 <img src="http://www.ips.gov.au/Images/Satellite/Total%20Electron%20Content/TEC%20Regional%20Map/TECRegionalMap.png"></p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Open TEC maintained by <a href="https://github.com/panggi">panggi</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/panggi">panggi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
